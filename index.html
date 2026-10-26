@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Helles Gästezimmer in einem denkmalgeschützten Emmentaler Bauernhaus von 1741 in Heimiswil. Mit separatem Zugang, eigenem Bad und sonnigem Sitzplatz.">
+  <meta name="theme-color" content="#f6f3ec">
+  <title>Emmentaler Stübli · Gästezimmer in Heimiswil</title>
+  <style>
+    :root { --ink:#26342c; --muted:#68736a; --cream:#f6f3ec; --paper:#fffefa; --green:#526b54; --line:#e5e1d7; --clay:#c17a55; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font-family:Georgia,'Times New Roman',serif; }
+    a { color:inherit; }
+    .wrap { width:min(1120px, calc(100% - 40px)); margin:auto; }
+    header { padding:25px 0; }
+    .brand { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand-name { font-size:21px; letter-spacing:.04em; }
+    .brand-place { color:var(--muted); font:13px/1.4 Arial,sans-serif; }
+    .hero { display:grid; grid-template-columns:1fr 1.08fr; min-height:490px; background:var(--paper); border-radius:20px; overflow:hidden; box-shadow:0 15px 50px #3a38250d; }
+    .hero-copy { padding:clamp(32px,6vw,74px); display:flex; flex-direction:column; justify-content:center; align-items:flex-start; }
+    .eyebrow { margin:0 0 18px; color:var(--green); font:700 11px/1.4 Arial,sans-serif; letter-spacing:.18em; text-transform:uppercase; }
+    h1 { max-width:460px; margin:0 0 19px; font-size:clamp(38px,5.5vw,66px); font-weight:400; line-height:1.02; letter-spacing:-.035em; }
+    .intro { max-width:420px; margin:0 0 28px; color:#59635c; font:16px/1.75 Arial,sans-serif; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:15px 22px; border-radius:999px; background:var(--green); color:white; text-decoration:none; font:700 14px Arial,sans-serif; transition:background .2s, transform .2s; }
+    .button:hover { background:#3c5340; transform:translateY(-1px); }
+    .hero-photo { position:relative; min-height:390px; }
+    .hero-photo img { width:100%; height:100%; min-height:390px; object-fit:cover; display:block; }
+    .photo-note { position:absolute; right:18px; bottom:18px; padding:9px 13px; border-radius:999px; background:#fffefaeb; font:12px Arial,sans-serif; }
+    section { padding:74px 0 0; }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap:20px; margin-bottom:24px; }
+    h2 { margin:0; font-size:clamp(28px,4vw,42px); font-weight:400; letter-spacing:-.025em; }
+    .section-note { margin:0; color:var(--muted); font:14px Arial,sans-serif; }
+    .gallery { display:grid; grid-template-columns:1.35fr 1fr 1fr; grid-template-rows:210px 210px; gap:12px; }
+    .gallery a { overflow:hidden; display:block; border-radius:13px; background:#e7e2d8; }
+    .gallery a:first-child { grid-row:span 2; }
+    .gallery img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s; }
+    .gallery a:hover img { transform:scale(1.035); }
+    .features { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; overflow:hidden; border:1px solid var(--line); border-radius:16px; background:var(--line); }
+    .feature { padding:26px 24px; background:var(--paper); }
+    .feature-icon { display:block; margin-bottom:14px; color:var(--clay); font-size:22px; }
+    .feature h3 { margin:0 0 8px; font-size:19px; font-weight:400; }
+    .feature p { margin:0; color:var(--muted); font:14px/1.65 Arial,sans-serif; }
+    .story { display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center; padding-bottom:72px; }
+    .story img { width:100%; height:300px; object-fit:cover; border-radius:16px; }
+    .story p { max-width:490px; color:#59635c; font:16px/1.8 Arial,sans-serif; }
+    .location { padding:27px 0 32px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; align-items:center; }
+    .location strong { font-size:20px; font-weight:400; }
+    .location span { color:var(--muted); font:14px Arial,sans-serif; }
+    footer { padding:30px 0 44px; display:flex; justify-content:space-between; align-items:center; gap:20px; color:var(--muted); font:12px Arial,sans-serif; }
+    footer a { text-decoration:none; }
+    @media (max-width:760px) {
+      .wrap { width:min(100% - 28px, 560px); }
+      header { padding:19px 0; }
+      .hero { grid-template-columns:1fr; }
+      .hero-copy { order:2; padding:32px 26px 36px; }
+      .hero-photo { order:1; min-height:300px; }
+      .hero-photo img { min-height:300px; max-height:390px; }
+      section { padding-top:54px; }
+      .section-head { display:block; }
+      .section-note { margin-top:8px; }
+      .gallery { grid-template-columns:1fr 1fr; grid-template-rows:180px 145px 145px; gap:9px; }
+      .gallery a:first-child { grid-column:span 2; grid-row:auto; }
+      .features { grid-template-columns:1fr; }
+      .feature { padding:22px; }
+      .story { grid-template-columns:1fr; gap:20px; padding-bottom:54px; }
+      .story img { height:260px; }
+      footer { align-items:flex-start; flex-direction:column; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none !important; } }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="brand">
+      <div class="brand-name">Emmentaler Stübli</div>
+      <div class="brand-place">Heimiswil · Emmental</div>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Ankommen und durchatmen</p>
+        <h1>Ein kleines Stück Emmental.</h1>
+        <p class="intro">Übernachte in einem liebevoll eingerichteten Gästezimmer in unserem denkmalgeschützten Bauernhaus von 1741 – ruhig gelegen im schönen Heimiswil.</p>
+        <a class="button" href="https://www.airbnb.ch/rooms/1801953458288203363" target="_blank" rel="noopener noreferrer">Auf Airbnb ansehen <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/zimmer-fenster.jpg" alt="Helles Gästezimmer mit Holzbalkendecke und mehreren Fenstern">
+        <span class="photo-note">Historisches Bauernhaus · seit 1741</span>
+      </div>
+    </div>
+
+    <section aria-labelledby="gallery-title">
+      <div class="section-head">
+        <h2 id="gallery-title">Ein erster Einblick</h2>
+        <p class="section-note">Hell, gemütlich und mit viel Charme.</p>
+      </div>
+      <div class="gallery">
+        <a href="assets/zimmer.jpg" target="_blank" aria-label="Zimmerfoto vergrössern"><img src="assets/zimmer.jpg" alt="Das gemütlich eingerichtete Schlafzimmer mit Doppelbett"></a>
+        <a href="assets/sitzplatz.jpg" target="_blank" aria-label="Sitzplatzfoto vergrössern"><img src="assets/sitzplatz.jpg" alt="Sonniger Sitzplatz mit Tisch und Stühlen unter der Laube"></a>
+        <a href="assets/badezimmer.jpg" target="_blank" aria-label="Badezimmerfoto vergrössern"><img src="assets/badezimmer.jpg" alt="Eigenes Badezimmer mit Dusche und WC"></a>
+        <a href="assets/bauernhaus.jpg" target="_blank" aria-label="Bauernhausfoto vergrössern"><img src="assets/bauernhaus.jpg" alt="Traditionelles Emmentaler Bauernhaus an sonniger Lage"></a>
+      </div>
+    </section>
+
+    <section aria-labelledby="details-title">
+      <div class="section-head">
+        <h2 id="details-title">Dein Aufenthalt</h2>
+        <p class="section-note">Alles für eine entspannte Auszeit.</p>
+      </div>
+      <div class="features">
+        <article class="feature"><span class="feature-icon" aria-hidden="true">⌂</span><h3>Mit Geschichte</h3><p>Das denkmalgeschützte Bauernhaus stammt aus dem Jahr 1741. Alte Holzdecken und viele Fenster verleihen dem Zimmer seinen besonderen Charakter.</p></article>
+        <article class="feature"><span class="feature-icon" aria-hidden="true">✦</span><h3>Für dich allein</h3><p>Ein separater Zugang und ein eigenes Badezimmer mit Dusche sorgen für Privatsphäre während deines Aufenthalts.</p></article>
+        <article class="feature"><span class="feature-icon" aria-hidden="true">☼</span><h3>Draussen verweilen</h3><p>Unter der schützenden Laube lädt ein sonniger Sitzplatz mit Tisch und Stühlen zum Verweilen ein.</p></article>
+      </div>
+    </section>
+
+    <section class="story" aria-label="Heimiswil und Umgebung">
+      <div>
+        <p class="eyebrow">Ruhig wohnen, gut verbunden</p>
+        <h2>Das Emmental vor der Tür.</h2>
+        <p>Geniesse die Ruhe und die schöne Landschaft rund um Heimiswil. Burgdorf erreichst du mit dem Bus in etwa 10 bis 15 Minuten.</p>
+        <a class="button" href="https://www.airbnb.ch/rooms/1801953458288203363" target="_blank" rel="noopener noreferrer">Verfügbarkeit auf Airbnb prüfen <span aria-hidden="true">↗</span></a>
+      </div>
+      <img src="assets/bauernhaus.jpg" alt="Das historische Bauernhaus in Heimiswil mit blühendem Garten">
+    </section>
+
+    <div class="location"><strong>Emmentaler Stübli</strong><span>Heimiswil, Kanton Bern · Schweiz</span></div>
+  </main>
+  <footer class="wrap"><span>Ein gemütlicher Rückzugsort im Emmental.</span><a href="https://www.airbnb.ch/rooms/1801953458288203363" target="_blank" rel="noopener noreferrer">Inserat auf Airbnb ↗</a></footer>
+</body>
+</html>
