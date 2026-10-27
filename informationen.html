@@ -37,6 +37,13 @@
     .photo-caption strong { display:block; color:var(--ink); font-size:13px; }
     .photo-caption a { color:var(--muted); text-decoration:none; }
     .photo-caption a:hover { text-decoration:underline; }
+    .landmark { display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center; padding:25px; border:1px solid var(--line); border-radius:16px; background:var(--paper); }
+    .landmark h3 { margin:0 0 10px; font-size:23px; font-weight:400; }
+    .landmark p { margin:0 0 14px; color:#59635c; font:14px/1.75 Arial,sans-serif; }
+    .landmark .audio-link { font:700 14px/1.5 Arial,sans-serif; text-decoration:none; }
+    .landmark .audio-link:hover { text-decoration:underline; }
+    .landmark-image { display:flex; align-items:center; justify-content:center; min-height:170px; padding:16px; border-radius:12px; background:#fff; }
+    .landmark-image img { display:block; width:100%; max-height:190px; object-fit:contain; }
     section { padding:64px 0 0; scroll-margin-top:20px; }
     .section-head { margin-bottom:22px; }
     h2 { margin:0 0 8px; font-size:clamp(28px,4vw,40px); font-weight:400; letter-spacing:-.025em; }
@@ -72,6 +79,7 @@
       .cards { grid-template-columns:1fr; }
       .photo-grid { grid-template-columns:1fr 1fr; grid-template-rows:190px 145px 145px; gap:9px; }
       .photo-card:first-child { grid-column:span 2; grid-row:auto; }
+      .landmark { grid-template-columns:1fr; gap:18px; padding:20px; }
       .card { padding:21px; }
       .emergency-links a { flex:1; justify-content:center; }
       footer { flex-direction:column; }
@@ -149,6 +157,18 @@
         <article class="card"><h3>Badeplätze an der Emme</h3><p>Bei der Heimiswilbrücke in Burgdorf laden Kiesbänke zum Verweilen, Grillieren und Baden ein. Bitte beachte die örtlichen Hinweise und die Strömung der Emme.</p><p><a href="https://emmental.ch/de/erlebniskarte/detail/emme-badeplaetze-heimiswilbruecke-burgdorf-f35ab404-23a0-4eb9-a5c5-c8e64e2366a6.html" target="_blank" rel="noopener noreferrer">Badeplätze auf der Emmentalerlebniskarte ↗</a></p></article>
         <article class="card"><h3>Minigolf Burgdorf</h3><p>Eine entspannte Freizeitidee für Gross und Klein.</p><p><a href="https://minigolf-burgdorf.ch" target="_blank" rel="noopener noreferrer">Minigolf Burgdorf ↗</a></p></article>
         <article class="card"><h3>Hallenbad Burgdorf</h3><p>Eine wetterunabhängige Möglichkeit für Bewegung und Badespass.</p><p><a href="https://www.hallenbad-burgdorf.ch/de/" target="_blank" rel="noopener noreferrer">Hallenbad Burgdorf ↗</a></p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="eibe-title">
+      <div class="landmark">
+        <div>
+          <p class="eyebrow">Ein Wahrzeichen von Heimiswil</p>
+          <h3 id="eibe-title">Die rund 1000 Jahre alte Eibe</h3>
+          <p>Die Eibe ist ein Wahrzeichen von Heimiswil und diente als Vorlage für das Gemeindewappen.</p>
+          <a class="audio-link" href="https://www.srf.ch/audio/swisstipp/die-eibe-von-heimiswil?uuid=9ab31d68-2491-4b7d-9dad-0ac607705bac" target="_blank" rel="noopener noreferrer">SRF-Beitrag zur Eibe anhören ↗</a>
+        </div>
+        <div class="landmark-image"><img src="assets/heimiswil-wappen.png" alt="Wappen der Gemeinde Heimiswil mit einer stilisierten Eibe" loading="lazy"></div>
       </div>
     </section>
 
