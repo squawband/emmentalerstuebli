@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nützliche Adressen, Einkaufsmöglichkeiten, Notfallnummern und Ausflugstipps für deinen Aufenthalt im Emmentaler Stübli in Heimiswil.">
+  <meta name="theme-color" content="#f6f3ec">
+  <title>Ausflüge &amp; nützliche Infos · Emmentaler Stübli</title>
+  <style>
+    :root { --ink:#26342c; --muted:#68736a; --cream:#f6f3ec; --paper:#fffefa; --green:#526b54; --line:#e5e1d7; --clay:#c17a55; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font-family:Georgia,'Times New Roman',serif; }
+    a { color:var(--green); }
+    .wrap { width:min(1120px,calc(100% - 40px)); margin:auto; }
+    header { padding:25px 0; }
+    .brand { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand-name { font-size:21px; letter-spacing:.04em; color:var(--ink); text-decoration:none; }
+    .brand-place { color:var(--muted); font:13px/1.4 Arial,sans-serif; }
+    nav { display:flex; gap:20px; align-items:center; font:13px Arial,sans-serif; }
+    nav a { color:var(--green); text-decoration:none; }
+    nav a:hover { text-decoration:underline; }
+    .hero { padding:clamp(34px,6vw,70px); border-radius:20px; background:var(--paper); box-shadow:0 15px 50px #3a38250d; }
+    .eyebrow { margin:0 0 15px; color:var(--green); font:700 11px/1.4 Arial,sans-serif; letter-spacing:.18em; text-transform:uppercase; }
+    h1 { max-width:720px; margin:0 0 17px; font-size:clamp(38px,6vw,64px); font-weight:400; line-height:1.03; letter-spacing:-.035em; }
+    .lead { max-width:720px; margin:0; color:#59635c; font:16px/1.75 Arial,sans-serif; }
+    .quicklinks { display:flex; flex-wrap:wrap; gap:10px; margin-top:27px; }
+    .quicklinks a { padding:10px 15px; border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--green); font:13px Arial,sans-serif; text-decoration:none; }
+    .quicklinks a:hover { background:#f2f1e9; }
+    section { padding:64px 0 0; scroll-margin-top:20px; }
+    .section-head { margin-bottom:22px; }
+    h2 { margin:0 0 8px; font-size:clamp(28px,4vw,40px); font-weight:400; letter-spacing:-.025em; }
+    .section-note { margin:0; color:var(--muted); font:14px/1.65 Arial,sans-serif; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+    .card { padding:23px; border:1px solid var(--line); border-radius:15px; background:var(--paper); }
+    .card h3 { margin:0 0 10px; font-size:19px; font-weight:400; }
+    .card p { margin:0 0 12px; color:#59635c; font:14px/1.7 Arial,sans-serif; }
+    .card p:last-child { margin-bottom:0; }
+    .card .meta { color:var(--muted); }
+    .card a { font:700 13px/1.5 Arial,sans-serif; text-decoration:none; }
+    .card a:hover { text-decoration:underline; }
+    .urgent { display:grid; grid-template-columns:1fr auto; align-items:center; gap:20px; padding:24px 27px; border-radius:15px; background:#edf0e8; }
+    .urgent h3 { margin:0 0 6px; font-size:20px; font-weight:400; }
+    .urgent p { margin:0; color:#59635c; font:14px/1.6 Arial,sans-serif; }
+    .emergency-links { display:flex; flex-wrap:wrap; gap:9px; }
+    .emergency-links a { display:inline-flex; gap:8px; align-items:center; padding:11px 14px; border-radius:999px; background:var(--green); color:white; font:700 13px Arial,sans-serif; text-decoration:none; white-space:nowrap; }
+    .emergency-links a:hover { background:#3c5340; }
+    .note { margin:20px 0 0; color:var(--muted); font:13px/1.6 Arial,sans-serif; }
+    .location { margin-top:64px; padding:27px 0 32px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; align-items:center; }
+    .location strong { font-size:20px; font-weight:400; }
+    .location span, footer { color:var(--muted); font:13px Arial,sans-serif; }
+    footer { padding:30px 0 44px; display:flex; justify-content:space-between; gap:20px; }
+    footer a { text-decoration:none; }
+    @media(max-width:800px) { .cards { grid-template-columns:repeat(2,1fr); } .urgent { grid-template-columns:1fr; } }
+    @media(max-width:600px) {
+      .wrap { width:min(100% - 28px,560px); }
+      header { padding:19px 0; }
+      .brand { flex-wrap:wrap; }
+      nav { width:100%; gap:16px; }
+      .hero { padding:32px 25px; }
+      section { padding-top:50px; }
+      .cards { grid-template-columns:1fr; }
+      .card { padding:21px; }
+      .emergency-links a { flex:1; justify-content:center; }
+      footer { flex-direction:column; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="brand">
+      <a class="brand-name" href="index.html">Emmentaler Stübli</a>
+      <div class="brand-place">Heimiswil · Emmental</div>
+      <nav aria-label="Hauptnavigation"><a href="index.html">Gästezimmer</a><a href="informationen.html" aria-current="page">Ausflüge &amp; Infos</a></nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="hero">
+      <p class="eyebrow">Gut zu wissen · Schönes entdecken</p>
+      <h1>Das Emmental erleben.</h1>
+      <p class="lead">Heimiswil ist ein ruhiger Ausgangspunkt für Wanderungen, Kultur und Ausflüge. Hier findest du unsere Tipps für unterwegs sowie wichtige Adressen und praktische Informationen für deinen Aufenthalt.</p>
+      <div class="quicklinks" aria-label="Zu den Abschnitten springen">
+        <a href="#einkaufen">Einkaufen</a><a href="#gesundheit">Gesundheit &amp; Notfall</a><a href="#nahe">In der Nähe</a><a href="#kultur">Kultur &amp; Geschichte</a><a href="#ausfluege">Tagesausflüge</a>
+      </div>
+    </div>
+
+    <section id="einkaufen" aria-labelledby="einkaufen-title">
+      <div class="section-head"><h2 id="einkaufen-title">Einkaufen in Heimiswil</h2><p class="section-note">Für den täglichen Bedarf und feine Produkte aus der Region.</p></div>
+      <div class="cards">
+        <article class="card"><h3>Volg Heimiswil</h3><p>Lebensmittel und Produkte für den täglichen Bedarf. Der Laden bietet auch eine Postagentur.</p><p class="meta">Kaltackerstrasse 5 · 3412 Heimiswil<br>Telefon: <a href="tel:+41344240410">034 424 04 10</a></p><p><a href="https://www.volg.ch/standorte-oeffnungszeiten/detail/volg-heimiswil/" target="_blank" rel="noopener noreferrer">Aktuelle Öffnungszeiten &amp; Services ↗</a></p></article>
+        <article class="card"><h3>Land-Metzgerei Schneider</h3><p>Fleisch, Wurstwaren aus eigener Produktion und regionale Spezialitäten.</p><p class="meta">Dorfstrasse 8 · 3412 Heimiswil<br>Di–Fr: 08.00–12.00 und 14.00–18.30 Uhr<br>Sa: 08.00–14.00 Uhr · Mo geschlossen<br>Telefon: <a href="tel:+41344227986">034 422 79 86</a></p><p><a href="https://www.metzg-schneider.ch/" target="_blank" rel="noopener noreferrer">Website der Metzgerei ↗</a></p></article>
+        <article class="card"><h3>Gmüesquelle Hofladen</h3><p>Saisonales Gemüse und weitere frische Produkte direkt vom Betrieb.</p><p class="meta">Schwendi 62 · 3412 Heimiswil<br>Mi: 12.00–19.00 Uhr<br>Do–Sa: 08.00–19.00 Uhr<br>So: 10.00–19.00 Uhr<br>Telefon: <a href="tel:+41796950206">079 695 02 06</a></p><p><a href="https://www.gmuesquelle.ch/hofladen" target="_blank" rel="noopener noreferrer">Details zum Hofladen ↗</a></p></article>
+      </div>
+    </section>
+
+    <section id="gesundheit" aria-labelledby="gesundheit-title">
+      <div class="section-head"><h2 id="gesundheit-title">Gesundheit &amp; wichtige Adressen</h2><p class="section-note">Bitte ruf in der Praxis vorgängig an, um einen Termin zu vereinbaren.</p></div>
+      <div class="cards">
+        <article class="card"><h3>Gruppenpraxis Sigristenhaus</h3><p>Arztpraxis in Heimiswil.</p><p class="meta">Oberdorf 3 · 3412 Heimiswil<br>Telefon: <a href="tel:+41344272828">034 427 28 28</a><br>E-Mail: <a href="mailto:gpsh@hin.ch">gpsh@hin.ch</a><br>Mo–Fr: 08.00–12.00 und 14.00–18.00 Uhr</p><p><a href="https://www.gruppenpraxis-heimiswil.ch/" target="_blank" rel="noopener noreferrer">Praxis-Website ↗</a></p></article>
+        <article class="card"><h3>Amavita Grosse Apotheke</h3><p>Apotheke in Burgdorf, an der Bahnhofstrasse.</p><p class="meta">Bahnhofstrasse 61 · 3400 Burgdorf<br>Telefon: <a href="tel:+41588781490">058 878 14 90</a><br>Mo–Fr: 07.00–18.30 Uhr<br>Sa: 07.00–16.00 Uhr · So geschlossen</p><p><a href="https://www.amavita.ch/de/apotheke-finden/amavita-grosse-apotheke" target="_blank" rel="noopener noreferrer">Apotheke &amp; aktuelle Öffnungszeiten ↗</a></p></article>
+        <article class="card"><h3>Spital Emmental · Burgdorf</h3><p>Die Notfallstation ist rund um die Uhr erreichbar.</p><p class="meta">Oberburgstrasse 54 · 3400 Burgdorf<br>Telefon: <a href="tel:+41344212121">034 421 21 21</a></p><p><a href="https://www.spital-emmental.ch/Notfallstation" target="_blank" rel="noopener noreferrer">Informationen zur Notfallstation ↗</a></p></article>
+      </div>
+      <div class="urgent" style="margin-top:12px">
+        <div><h3>Bei akuten Notfällen</h3><p>Wähle direkt die passende Notrufnummer. Für medizinische Notfälle erreichst du die Sanität rund um die Uhr.</p></div>
+        <div class="emergency-links"><a href="tel:144">Sanität · 144</a><a href="tel:117">Polizei · 117</a><a href="tel:118">Feuerwehr · 118</a></div>
+      </div>
+    </section>
+
+    <section id="nahe" aria-labelledby="nahe-title">
+      <div class="section-head"><h2 id="nahe-title">Draussen unterwegs</h2><p class="section-note">Hügel, Wälder, Aussicht und ein erfrischendes Bad an der Emme.</p></div>
+      <div class="cards">
+        <article class="card"><h3>Wanderungen &amp; Eggen</h3><p>Rund um Heimiswil führen Wege durch Wälder, Wiesen und die typische Emmentaler Hügellandschaft. Besonders schön sind die Höhenzüge und Aussichtspunkte auf den Eggen.</p><p><a href="https://www.heimiswil.ch/de/freizeit-tourismus/uebersicht/" target="_blank" rel="noopener noreferrer">Freizeit und Tourismus Heimiswil ↗</a></p></article>
+        <article class="card"><h3>Brätlistelle Riedegg</h3><p>Die Brätlistelle liegt an der Höhenwanderung zwischen Burgdorf, Lueg und Rachisberg. Vor Ort gibt es einen überdachten Unterstand, Grillmöglichkeiten, Sitzplätze und eine Kühlbox.</p><p><a href="https://emmental.ch/de/erlebniskarte/detail/braetlistelle-riedegg-heimiswil-0f337fb4-c837-49fa-9c03-48728a617078.html" target="_blank" rel="noopener noreferrer">Brätlistelle auf der Emmentalerlebniskarte ↗</a></p></article>
+        <article class="card"><h3>Lueg</h3><p>Ein beliebter Aussichtspunkt mit weitem Blick über die Hügel und Täler des Emmentals. Der Besuch lässt sich gut mit einer Wanderung verbinden.</p><p><a href="https://emmental.ch/de/erleben.html" target="_blank" rel="noopener noreferrer">Weitere Ausflugsideen im Emmental ↗</a></p></article>
+        <article class="card"><h3>Badeplätze an der Emme</h3><p>Bei der Heimiswilbrücke in Burgdorf laden Kiesbänke zum Verweilen, Grillieren und Baden ein. Bitte beachte die örtlichen Hinweise und die Strömung der Emme.</p><p><a href="https://emmental.ch/de/erlebniskarte/detail/emme-badeplaetze-heimiswilbruecke-burgdorf-f35ab404-23a0-4eb9-a5c5-c8e64e2366a6.html" target="_blank" rel="noopener noreferrer">Badeplätze auf der Emmentalerlebniskarte ↗</a></p></article>
+        <article class="card"><h3>Minigolf Burgdorf</h3><p>Eine entspannte Freizeitidee für Gross und Klein.</p><p><a href="https://minigolf-burgdorf.ch" target="_blank" rel="noopener noreferrer">Minigolf Burgdorf ↗</a></p></article>
+        <article class="card"><h3>Hallenbad Burgdorf</h3><p>Eine wetterunabhängige Möglichkeit für Bewegung und Badespass.</p><p><a href="https://www.hallenbad-burgdorf.ch/de/" target="_blank" rel="noopener noreferrer">Hallenbad Burgdorf ↗</a></p></article>
+      </div>
+    </section>
+
+    <section id="kultur" aria-labelledby="kultur-title">
+      <div class="section-head"><h2 id="kultur-title">Kultur &amp; Emmentaler Tradition</h2><p class="section-note">Historische Orte, Kunst und regionale Handwerkskunst.</p></div>
+      <div class="cards">
+        <article class="card"><h3>Burgdorf: Altstadt &amp; Schloss</h3><p>Spaziere durch Ober- und Unterstadt und entdecke die historischen Gassen und Gebäude. Das Schloss bietet Ausstellungen, Einblicke in die Geschichte und einen schönen Blick über die Stadt.</p><p><a href="https://schloss-burgdorf.ch/de/" target="_blank" rel="noopener noreferrer">Schloss Burgdorf ↗</a> · <a href="https://www.burgdorf.ch/de/kultur-freizeit/tourismus/schloss-und-altstadt.php" target="_blank" rel="noopener noreferrer">Altstadt entdecken ↗</a></p></article>
+        <article class="card"><h3>Museum Franz Gertsch</h3><p>Das Museum ist dem Werk von Franz Gertsch gewidmet und zeigt auf einem Teil der Ausstellungsfläche Wechselausstellungen zeitgenössischer Kunst. Eine schöne Idee auch bei schlechtem Wetter.</p><p><a href="https://www.museum-franzgertsch.ch/de/museum/geschichte" target="_blank" rel="noopener noreferrer">Museum Franz Gertsch ↗</a></p></article>
+        <article class="card"><h3>Gotthelf-Zentrum</h3><p>In Lützelflüh erfährst du mehr über den Schriftsteller Jeremias Gotthelf und das Leben im historischen Emmental.</p><p><a href="https://www.gotthelf.ch/" target="_blank" rel="noopener noreferrer">Gotthelf-Zentrum ↗</a></p></article>
+        <article class="card"><h3>Emmentaler Schaukäserei</h3><p>Entdecke die Herstellung des Emmentaler Käses und die regionale Käsetradition in Affoltern im Emmental.</p><p><a href="https://www.emmentaler-schaukaeserei.ch" target="_blank" rel="noopener noreferrer">Emmentaler Schaukäserei ↗</a></p></article>
+        <article class="card"><h3>Kambly Erlebnis</h3><p>In Trubschachen dreht sich alles um die bekannte Schweizer Biscuitkultur. Der Besuch lässt sich mit einer Fahrt durch das Emmental verbinden.</p><p><a href="https://www.kambly.ch/de/erlebnis" target="_blank" rel="noopener noreferrer">Kambly Erlebnis ↗</a></p></article>
+        <article class="card"><h3>Sensorium Rüttihubelbad</h3><p>An zahlreichen Stationen können Familien und Erwachsene ihre Sinne spielerisch entdecken und ausprobieren.</p><p><a href="https://www.ruettihubelbad.ch/sensorium" target="_blank" rel="noopener noreferrer">Sensorium entdecken ↗</a></p></article>
+      </div>
+    </section>
+
+    <section id="ausfluege" aria-labelledby="ausfluege-title">
+      <div class="section-head"><h2 id="ausfluege-title">Für einen Tagesausflug</h2><p class="section-note">Mit dem öffentlichen Verkehr oder dem Auto gut erreichbar.</p></div>
+      <div class="cards">
+        <article class="card"><h3>Bern</h3><p>Die Bundesstadt lockt mit der UNESCO-Altstadt, den Lauben, dem Zytglogge, dem Bärengraben und dem Rosengarten mit Blick über die Dächer.</p></article>
+        <article class="card"><h3>Solothurn</h3><p>Entdecke die barocke Altstadt, spaziere an der Aare und gönn dir eine Pause in einem der vielen Cafés und Restaurants.</p></article>
+        <article class="card"><h3>Thun &amp; Thunersee</h3><p>Schloss, Altstadt und Uferpromenade machen Thun zu einem lohnenden Ausflugsziel – besonders an einem sonnigen Tag am Wasser.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="weitere-title">
+      <div class="section-head"><h2 id="weitere-title">Noch mehr entdecken</h2><p class="section-note">Aktuelle Veranstaltungen, Wanderungen und Ausflugsideen.</p></div>
+      <div class="cards">
+        <article class="card"><h3>Emmental Tourismus</h3><p>Inspiration für Ausflüge, Erlebnisse und regionale Veranstaltungen.</p><p><a href="https://emmental.ch/de/erleben.html" target="_blank" rel="noopener noreferrer">Emmental Tourismus ↗</a></p></article>
+        <article class="card"><h3>Golf Emmental</h3><p>Golfplatz in der Region für eine sportliche Auszeit in der Landschaft des Emmentals.</p><p><a href="https://www.golfemmental.ch" target="_blank" rel="noopener noreferrer">Golf Emmental ↗</a></p></article>
+        <article class="card"><h3>Vor dem Ausflug</h3><p>Bitte prüfe Öffnungszeiten, Reservationen, Wetterbedingungen und Verbindungen des öffentlichen Verkehrs direkt beim jeweiligen Anbieter.</p></article>
+      </div>
+      <p class="note">Öffnungszeiten und Angebote können sich ändern. Die verlinkten Anbieter informieren über den aktuellen Stand.</p>
+    </section>
+
+    <div class="location"><strong>Emmentaler Stübli</strong><span>Heimiswil, Kanton Bern · Schweiz</span></div>
+  </main>
+  <footer class="wrap"><span>Ein gemütlicher Rückzugsort im Emmental.</span><a href="index.html">Zurück zur Unterkunft ↗</a></footer>
+</body>
+</html>

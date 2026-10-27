@@ -17,6 +17,9 @@
     .brand { display:flex; align-items:center; justify-content:space-between; gap:16px; }
     .brand-name { font-size:21px; letter-spacing:.04em; }
     .brand-place { color:var(--muted); font:13px/1.4 Arial,sans-serif; }
+    .top-nav { display:flex; gap:20px; align-items:center; font:13px Arial,sans-serif; }
+    .top-nav a { color:var(--green); text-decoration:none; }
+    .top-nav a:hover { text-decoration:underline; }
     .hero { display:grid; grid-template-columns:1fr 1.08fr; min-height:490px; background:var(--paper); border-radius:20px; overflow:hidden; box-shadow:0 15px 50px #3a38250d; }
     .hero-copy { padding:clamp(32px,6vw,74px); display:flex; flex-direction:column; justify-content:center; align-items:flex-start; }
     .eyebrow { margin:0 0 18px; color:var(--green); font:700 11px/1.4 Arial,sans-serif; letter-spacing:.18em; text-transform:uppercase; }
@@ -52,6 +55,8 @@
     @media (max-width:760px) {
       .wrap { width:min(100% - 28px, 560px); }
       header { padding:19px 0; }
+      .brand { flex-wrap:wrap; }
+      .top-nav { width:100%; gap:16px; }
       .hero { grid-template-columns:1fr; }
       .hero-copy { order:2; padding:32px 26px 36px; }
       .hero-photo { order:1; min-height:300px; }
@@ -75,6 +80,10 @@
     <div class="brand">
       <div class="brand-name">Emmentaler Stübli</div>
       <div class="brand-place">Heimiswil · Emmental</div>
+      <nav class="top-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Gästezimmer</a>
+        <a href="informationen.html">Ausflüge &amp; Infos</a>
+      </nav>
     </div>
   </header>
   <main class="wrap">
