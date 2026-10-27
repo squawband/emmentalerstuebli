@@ -27,6 +27,16 @@
     .quicklinks { display:flex; flex-wrap:wrap; gap:10px; margin-top:27px; }
     .quicklinks a { padding:10px 15px; border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--green); font:13px Arial,sans-serif; text-decoration:none; }
     .quicklinks a:hover { background:#f2f1e9; }
+    .photo-intro { padding-top:34px; }
+    .photo-grid { display:grid; grid-template-columns:1.35fr 1fr 1fr; grid-template-rows:190px 190px; gap:12px; }
+    .photo-card { position:relative; overflow:hidden; min-height:160px; border-radius:15px; background:#e7e2d8; }
+    .photo-card:first-child { grid-row:span 2; }
+    .photo-card img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .35s; }
+    .photo-card:hover img { transform:scale(1.035); }
+    .photo-caption { position:absolute; right:10px; bottom:10px; left:10px; padding:9px 11px; border-radius:9px; background:#fffefaed; font:12px/1.45 Arial,sans-serif; }
+    .photo-caption strong { display:block; color:var(--ink); font-size:13px; }
+    .photo-caption a { color:var(--muted); text-decoration:none; }
+    .photo-caption a:hover { text-decoration:underline; }
     section { padding:64px 0 0; scroll-margin-top:20px; }
     .section-head { margin-bottom:22px; }
     h2 { margin:0 0 8px; font-size:clamp(28px,4vw,40px); font-weight:400; letter-spacing:-.025em; }
@@ -60,6 +70,8 @@
       .hero { padding:32px 25px; }
       section { padding-top:50px; }
       .cards { grid-template-columns:1fr; }
+      .photo-grid { grid-template-columns:1fr 1fr; grid-template-rows:190px 145px 145px; gap:9px; }
+      .photo-card:first-child { grid-column:span 2; grid-row:auto; }
       .card { padding:21px; }
       .emergency-links a { flex:1; justify-content:center; }
       footer { flex-direction:column; }
@@ -84,6 +96,27 @@
         <a href="#einkaufen">Einkaufen</a><a href="#gesundheit">Gesundheit &amp; Notfall</a><a href="#nahe">In der Nähe</a><a href="#kultur">Kultur &amp; Geschichte</a><a href="#ausfluege">Tagesausflüge</a>
       </div>
     </div>
+
+    <section class="photo-intro" aria-label="Eindrücke aus dem Emmental">
+      <div class="photo-grid">
+        <figure class="photo-card">
+          <img src="https://kambly.com/app/uploads/2022/01/Kambly-Emmental_1982x1400.jpg" alt="Grüne Hügel und typische Bauernhäuser im Emmental" loading="lazy">
+          <figcaption class="photo-caption"><strong>Emmentaler Landschaft</strong><a href="https://kambly.com/en/all-about-kambly/origin/" target="_blank" rel="noopener noreferrer">Bild: Kambly ↗</a></figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="https://media.myswitzerland.com/image/fetch/c_lfill%2Cg_auto%2Cw_3200%2Ch_1800/f_auto%2Cq_80%2Cfl_keep_iptc/https%3A/www.myswitzerland.com/-/media/dam/resources/places/b/u/burgdorf/meta%20page%20image%20all%20season/66963_32001800.jpeg" alt="Schloss Burgdorf über der historischen Altstadt" loading="lazy">
+          <figcaption class="photo-caption"><strong>Schloss Burgdorf</strong><a href="https://www.myswitzerland.com/en/destinations/burgdorf/" target="_blank" rel="noopener noreferrer">Bild: Schweiz Tourismus ↗</a></figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="https://madeinbern.com/fileadmin/_processed_/0/6/csm_emmentaler-schaukaeserei-hauptgebaeude-destination-bern_90ca71a773.jpg" alt="Traditionelles Gebäude der Emmentaler Schaukäserei in Affoltern" loading="lazy">
+          <figcaption class="photo-caption"><strong>Emmentaler Schaukäserei</strong><a href="https://madeinbern.com/de/erlebnisse/ganzjaehrig/kunst-kultur/tradition-brauchtum/emmentaler-schaukaeserei" target="_blank" rel="noopener noreferrer">Bild: Made in Bern ↗</a></figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="https://www.bls.ch/-/media/bls/bilder/freizeit-ferien/ausfluege/heimatland/kambly/kambly-backen-erwachsene.jpg?hash=A29EEFBDC907C8122E1F4CA342E6B33B&amp;mw=1280" alt="Besucherinnen und Besucher beim Backen im Kambly Erlebnis" loading="lazy">
+          <figcaption class="photo-caption"><strong>Kambly Erlebnis</strong><a href="https://www.bls.ch/de/freizeit-und-ferien/ausfluege/kambly-erlebnis" target="_blank" rel="noopener noreferrer">Bild: BLS ↗</a></figcaption>
+        </figure>
+      </div>
+    </section>
 
     <section id="einkaufen" aria-labelledby="einkaufen-title">
       <div class="section-head"><h2 id="einkaufen-title">Einkaufen in Heimiswil</h2><p class="section-note">Für den täglichen Bedarf und feine Produkte aus der Region.</p></div>
